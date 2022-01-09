@@ -1,0 +1,25 @@
+{
+  "name": "SQL_ERD",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/strauss02/SQL_ERD.git"
+  },
+  "keywords": [],
+  "author": "ahmed <strauss02@hotmail.co.il>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/strauss02/SQL_ERD/issues"
+  },
+  "homepage": "https://github.com/strauss02/SQL_ERD#readme",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.17.2",
+    "nodemon": "^2.0.15"
+  }
+}
