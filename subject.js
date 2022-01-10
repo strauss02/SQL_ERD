@@ -5,7 +5,7 @@ const router = express.Router()
 
 router.get('/:id', (req, res) => {
   const sql = `
-  SELECT * FROM teachers
+  SELECT * FROM subjects
   WHERE id = ${req.params.id}
   `
   db.query(sql, function (err, result) {

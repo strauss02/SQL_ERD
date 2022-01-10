@@ -3,10 +3,10 @@ const db = require('./db')
 
 const router = express.Router()
 
-router.get('/:id', (req, res) => {
+router.get('/:num', (req, res) => {
   const sql = `
-  SELECT * FROM teachers
-  WHERE id = ${req.params.id}
+  SELECT * FROM base_classes
+  WHERE base_class_num = ${req.params.num}
   `
   db.query(sql, function (err, result) {
     if (err) throw err

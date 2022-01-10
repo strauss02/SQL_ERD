@@ -1,9 +1,18 @@
 const express = require('express')
 const app = express()
-const mysql = require('mysql2')
 const PORT = 3001
 const teacherRouter = require('./teacher')
+const studentRouter = require('./student')
+const subjectRouter = require('./subject')
+const baseClassRouter = require('./baseClass')
 const db = require('./db')
+const { json } = require('body-parser')
+
+app.use(express.json())
+
+app.get('/', (req, res) => {
+  res.send('welcome')
+})
 
 app.get('/test', (req, res) => {
   const sql = `SELECT * FROM students`
@@ -15,9 +24,8 @@ app.get('/test', (req, res) => {
 })
 
 app.use('/teacher', teacherRouter)
-
-app.get('/', (req, res) => {
-  res.send('welcome')
-})
+app.use('/student', studentRouter)
+app.use('/subject', subjectRouter)
+app.use('/base_class', baseClassRouter)
 
 app.listen(PORT, console.log(`Listening on ${PORT}`))
